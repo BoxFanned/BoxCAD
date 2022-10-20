@@ -1,0 +1,32 @@
+{
+  "name": "boxcad-fivem",
+  "version": "0.0.1",
+  "description": "FiveM CAD System",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoxFanned/BoxCAD.git"
+  },
+  "author": "BoxFanned",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BoxFanned/BoxCAD/issues"
+  },
+  "homepage": "https://github.com/BoxFanned/BoxCAD#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "better-sqlite3": "^7.6.2",
+    "body-parser": "^1.20.1",
+    "discord-webhook-node": "^1.1.8",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "html": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
