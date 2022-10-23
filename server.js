@@ -1,14 +1,14 @@
 const express = require('express');
 const session = require("express-session");
 const bodyParser = require('body-parser');
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcrypt-nodejs");
 const db = require('better-sqlite3')('boxcad.db', {});
 const path = require("path");
 const config = require("./config.json");
 const { Webhook } = require("discord-webhook-node");
 var discord;
 if(config.webhookEnabled) {
-    discord = new Webhook('https://canary.discord.com/api/webhooks/1031789595622391830/bD1nQzMy0irwh5hPe86LEog-AHPzGkeRSefSuufczVJcoDXU8IKwDpkpVW3YrOr7GGMJ');
+    discord = new Webhook(config.webhookUrl);
 }
 const { escape } = require('querystring');
 var app = express()
@@ -98,4 +98,6 @@ app.get("*", async function(req, res) {
     res.send("<html> <h1> Unknown page. </h1> </html>");
 })
 
-app.listen(80)
+app.listen(80, () => {
+    console.log("[BoxCAD] Loaded & started!");
+})

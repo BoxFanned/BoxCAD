@@ -1,4 +1,5 @@
 {
     "communityName": "LegalRP",
-    "webhookEnabled": false
+    "webhookEnabled": false,
+    "webhookUrl": "default"
 }
